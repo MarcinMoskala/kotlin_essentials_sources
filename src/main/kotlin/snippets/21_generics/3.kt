@@ -1,27 +1,17 @@
 package f_21_generics.s_3
 
-class ValueWithHistory<T>(
-    private var value: T
-) {
-    private var history: List<T> = listOf(value)
+import kotlin.random.Random
 
-    fun setValue(value: T) {
-        this.value = value
-        this.history += value
-    }
+// The result type is the same as the argument type
+fun <T> id(value: T): T = value
 
-    fun currentValue(): T = value
-
-    fun history(): List<T> = history
-}
+// The result type is the closest supertype of arguments
+fun <T> randomOf(a: T, b: T): T =
+    if (Random.nextBoolean()) a else b
 
 fun main() {
-    val letter = ValueWithHistory<String>("A")
-    // The type of letter is ValueWithHistory<String>
-    letter.setValue("B")
-    // letter.setValue(123) <- this would not compile
-    val l = letter.currentValue() // the type of l is String
-    println(l) // B
-    val h = letter.history() // the type of h is List<String>
-    println(h) // [A, B]
+    val a = id(10) // Inferred a type is Int
+    val b = id("AAA") // Inferred b type is String
+    val c = randomOf("A", "B") // Inferred c type is String
+    val d = randomOf(1, 1.5) // Inferred d type is Number
 }

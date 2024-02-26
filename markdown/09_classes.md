@@ -11,6 +11,7 @@ fun main() {
 
 
 ```
+//2
 class A {
     // class body
 }
@@ -18,7 +19,7 @@ class A {
 
 
 ```
-//2
+//3
 class A {
     fun printMe() {
         println(this)
@@ -34,7 +35,7 @@ fun main() {
 
 
 ```
-//3
+//4
 // Kotlin code
 class User {
     var name: String = ""
@@ -77,6 +78,7 @@ public final class PlaygroundKt {
 
 
 ```
+//5
 class User {
     private var name: String = ""
 
@@ -92,7 +94,7 @@ class User {
 
 
 ```
-//4
+//6
 class User {
     var name: String = ""
         get() = field.uppercase()
@@ -112,7 +114,7 @@ fun main() {
 
 
 ```
-//5
+//7
 class User {
     // DON'T DO THAT
     var name: String = ""
@@ -130,7 +132,7 @@ fun main() {
 
 
 ```
-//6
+//8
 class User {
     var name: String = ""
         get() = field.uppercase()
@@ -152,7 +154,7 @@ fun main() {
 
 
 ```
-//7
+//9
 class User {
     var name: String = ""
     var surname: String = ""
@@ -170,7 +172,7 @@ fun main() {
 
 
 ```
-//8
+//10
 class User(
     var name: String,
     var surname: String,
@@ -193,7 +195,7 @@ fun main() {
 
 
 ```
-//9
+//11
 class Holder {
     val v1: Int get() = calculate("v1")
     val v2: Int = calculate("v2")
@@ -220,7 +222,7 @@ fun main() {
 
 
 ```
-//10
+//12
 import java.util.Date
 
 class User {
@@ -248,6 +250,7 @@ class User {
 
 
 ```
+//13
 class A
 
 val a = A()
@@ -255,7 +258,7 @@ val a = A()
 
 
 ```
-//11
+//14
 class User {
     var name: String = ""
     var surname: String = ""
@@ -275,7 +278,7 @@ fun main() {
 
 
 ```
-//12
+//15
 class User constructor(name: String, surname: String) {
     var name: String = name
     var surname: String = surname
@@ -290,7 +293,7 @@ fun main() {
 
 
 ```
-//13
+//16
 class User(name: String, surname: String) {
     var name: String = name
     var surname: String = surname
@@ -305,7 +308,7 @@ fun main() {
 
 
 ```
-//14
+//17
 class User(name: String, surname: String) {
     var name: String = name
     var surname: String = surname
@@ -329,7 +332,7 @@ fun main() {
 
 
 ```
-//15
+//18
 class User(
     var name: String,
     var surname: String,
@@ -346,7 +349,7 @@ fun main() {
 
 
 ```
-//16
+//19
 class User(
     var name: String = "",
     var surname: String = "Anonim",
@@ -396,6 +399,7 @@ public final class User {
 
 
 ```
+//20
 class User(
     val name: String,
     val surname: String,
@@ -405,7 +409,7 @@ class User(
 
 
 ```
-//17
+//21
 class Puppy(val name: String) {
 
     class InnerPuppy {
@@ -425,7 +429,7 @@ fun main() {
 
 
 ```
-//18
+//22
 class Puppy(val name: String) {
 
     inner class InnerPuppy {

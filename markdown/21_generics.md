@@ -6,13 +6,14 @@ a<String>() // String is used here as a type argument
 
 
 ```
+//1
 fun <T> a() {}
 fun <T1, T2> b() {}
 ```
 
 
 ```
-//1
+//2
 fun <T> a() {}
 fun <T1, T2> b() {}
 fun <T> c(t: T) {}
@@ -36,7 +37,7 @@ fun main() {
 
 
 ```
-//2
+//3
 import kotlin.random.Random
 
 // The result type is the same as the argument type
@@ -56,7 +57,7 @@ fun main() {
 
 
 ```
-//3
+//4
 class ValueWithHistory<T>(
     private var value: T
 ) {
@@ -98,7 +99,7 @@ val letter: ValueWithHistory<Any> = ValueWithHistory("A")
 
 
 ```
-//4
+//5
 fun main() {
     val letters = ArrayList<String>()
     letters.add("A") // the argument must be of type String
@@ -134,6 +135,7 @@ fun main() {
 
 
 ```
+//6
 class Box<T> {
     var value: T? = null
 
@@ -155,6 +157,7 @@ fun main() {
 
 
 ```
+//7
 interface List<out E> : Collection<E> {
     override val size: Int
     override fun isEmpty(): Boolean
@@ -174,7 +177,7 @@ interface List<out E> : Collection<E> {
 
 
 ```
-//5
+//8
 interface Consumer<T> {
     fun consume(value: T)
 }
@@ -194,7 +197,7 @@ fun main() {
 
 
 ```
-//6
+//9
 open class C<T>
 interface I<T>
 class A : C<Int>(), I<String>
@@ -228,7 +231,7 @@ class MessageListAdapter(
 
 
 ```
-//7
+//10
 open class C<T>
 interface I<T>
 class A<T> : C<T>(), I<T>
@@ -246,6 +249,7 @@ fun main() {
 
 
 ```
+//11
 interface Iterable<out T> {
     // ...
 }
@@ -268,7 +272,7 @@ interface MutableList<E> : List<E>, MutableCollection<E> {
 
 
 ```
-//8
+//12
 open class C<T>
 interface I<T>
 class A<T> : C<Int>(), I<String>
@@ -293,7 +297,7 @@ fun <T> example(a: Any) {
 
 
 ```
-//9
+//13
 import kotlin.reflect.typeOf
 
 inline fun <reified T> example(a: Any) {
@@ -371,6 +375,7 @@ fun main() {
 
 
 ```
+//14
 fun printSize(list: List<*>) {
     println(list.size)
 }

@@ -1,20 +1,20 @@
 package f_11_data_classes.s_14
 
-data class Dog(
-   val name: String,
-) {
-   // Bad practice, avoid mutable properties in data classes
-   var trained = false
-}
-
 fun main() {
-   val d1 = Dog("Cookie")
-   d1.trained = true
-   println(d1) // Dog(name=Cookie)
-   // so nothing about trained property
+   val visited = listOf("Spain", "Morocco", "India")
+   val (first, second, third) = visited
+   println("$first $second $third")
+   // Spain Morocco India
 
-   val d2 = d1.copy()
-   println(d1.trained) // true
-   println(d2.trained) // false
-   // so trained value not copied
+   val trip = mapOf(
+       "Spain" to "Gran Canaria",
+       "Morocco" to "Taghazout",
+       "India" to "Rishikesh"
+   )
+   for ((country, city) in trip) {
+       println("We loved $city in $country")
+       // We loved Gran Canaria in Spain
+       // We loved Taghazout in Morocco
+       // We loved Rishikesh in India
+   }
 }

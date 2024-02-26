@@ -100,6 +100,7 @@ fun String.remove(value: String) = this.replace(value, "")
 
 
 ```
+//5
 val <T> List<T>.lastIndex: Int
     get() = size - 1
 ```
@@ -138,7 +139,7 @@ var User.birthdate: Date?
 
 
 ```
-//5
+//6
 open class View
 class Button : View()
 
@@ -160,7 +161,7 @@ fun main() {
 
 
 ```
-//6
+//7
 open class View {
    open fun printMe() {
        println("I'm a View")
@@ -182,7 +183,7 @@ fun main() {
 
 
 ```
-//7
+//8
 open class View
 class Button : View()
 
@@ -204,6 +205,7 @@ fun main() {
 
 
 ```
+//9
 inline fun CharSequence?.isNullOrBlank(): Boolean {
     // (skipped contract definition)
     return this == null || this.isBlank()
@@ -220,7 +222,7 @@ fun Iterable<Int>.sum(): Int {
 
 
 ```
-//8
+//10
 object A
 
 fun A.foo() {}
@@ -235,7 +237,7 @@ fun main() {
 
 
 ```
-//9
+//11
 class A {
     companion object
 }
@@ -252,6 +254,7 @@ fun main() {
 
 
 ```
+//12
 class Telephone {
     fun String.call() { 
         // ...
@@ -272,6 +275,7 @@ fun View.hide() {
 
 
 ```
+//13
 interface Iterable<out T> {
     operator fun iterator(): Iterator<T>
 }
@@ -279,6 +283,7 @@ interface Iterable<out T> {
 
 
 ```
+//14
 fun <T : Comparable<T>> Iterable<T>.sorted(): List<T> {
     if (this is Collection) {
         if (size <= 1) return this.toList()
@@ -316,6 +321,7 @@ class Product(
 
 
 ```
+//15
 class ProductJson(
     val id: String,
     val title: String,

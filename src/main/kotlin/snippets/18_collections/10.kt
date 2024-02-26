@@ -1,6 +1,11 @@
 package f_18_collections.s_10
 
 fun main() {
-    val list = listOf("A", "B", "C")
-    println(list.size) // 3
+    var list = listOf("A", "B")
+    list += "C"
+    println(list) // [A, B, C]
+
+    val mutable = mutableListOf("A", "B")
+    mutable += "C"
+    println(mutable) // [A, B, C]
 }

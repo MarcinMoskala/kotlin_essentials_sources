@@ -1,4 +1,5 @@
 ```
+//1
 interface Iterable<out T> {
     operator fun iterator(): Iterator<T>
 }
@@ -17,7 +18,7 @@ interface Collection<out E> : Iterable<E> {
 
 
 ```
-//1
+//2
 fun main() {
     var a = 100
     a = a + 10
@@ -33,7 +34,7 @@ fun main() {
 
 
 ```
-//2
+//3
 fun main() {
     var list = listOf("A", "B")
     list = list + "C"
@@ -47,7 +48,7 @@ fun main() {
 
 
 ```
-//3
+//4
 fun main() {
     val mutable = mutableListOf("A", "B")
     mutable.add("C")
@@ -58,7 +59,7 @@ fun main() {
 
 
 ```
-//4
+//5
 fun main() {
     // We create `List` using `listOf` function.
     val list: List<String> = listOf("A", "B", "C")
@@ -89,7 +90,7 @@ fun main() {
 
 
 ```
-//5
+//6
 fun main() {
     val list: List<Char> = listOf('A', 'B', 'C')
     val mutableList: MutableList<Char> = list.toMutableList()
@@ -103,7 +104,7 @@ fun main() {
 
 
 ```
-//6
+//7
 fun main() {
     val list = listOf("A", "B", "C")
     println(list) // [A, B, C]
@@ -112,7 +113,7 @@ fun main() {
 
 
 ```
-//7
+//8
 fun main() {
     val list: List<String> = listOf("A", "B", "C")
     println(list) // [A, B, C]
@@ -123,7 +124,7 @@ fun main() {
 
 
 ```
-//8
+//9
 fun main() {
     var list = listOf("A", "B")
     list = list + "C"
@@ -149,7 +150,7 @@ fun main() {
 
 
 ```
-//9
+//10
 fun main() {
     var list = listOf("A", "B")
     list += "C"
@@ -163,7 +164,7 @@ fun main() {
 
 
 ```
-//10
+//11
 fun main() {
     val list = listOf("A", "B", "C")
     println(list.size) // 3
@@ -172,7 +173,7 @@ fun main() {
 
 
 ```
-//11
+//12
 fun main() {
     val list = listOf("A", "B", "C")
     println(list.size == 0) // false
@@ -186,7 +187,7 @@ fun main() {
 
 
 ```
-//12
+//13
 fun main() {
     val list = listOf("A", "B")
     println(list[1]) // B
@@ -197,7 +198,7 @@ fun main() {
 
 
 ```
-//13
+//14
 fun main() {
     val list = listOf("A", "B")
     println(list.getOrNull(1)) // B
@@ -210,7 +211,7 @@ fun main() {
 
 
 ```
-//14
+//15
 fun main() {
     val map = mutableMapOf("A" to 1, "B" to 2)
     println(map.getOrPut("A") { 3 }) // 1
@@ -221,7 +222,7 @@ fun main() {
 
 
 ```
-//15
+//16
 fun main() {
     val list = listOf("A", "B")
     println(list.indexOf("A")) // 0
@@ -232,7 +233,7 @@ fun main() {
 
 
 ```
-//16
+//17
 fun main() {
     val mutable = mutableListOf("A", "B", "C")
     mutable[1] = "X"
@@ -244,7 +245,7 @@ fun main() {
 
 
 ```
-//17
+//18
 fun main() {
     val letters = listOf("A", "B", "C")
     println(letters.contains("A")) // true
@@ -256,7 +257,7 @@ fun main() {
 
 
 ```
-//18
+//19
 fun main() {
     val letters = listOf("A", "B", "C")
     println("A" !in letters) // false
@@ -266,7 +267,7 @@ fun main() {
 
 
 ```
-//19
+//20
 fun main() {
     val letters = listOf("A", "B", "C")
     for (letter in letters) {
@@ -277,7 +278,7 @@ fun main() {
 
 
 ```
-//20
+//21
 fun main() {
     val set = setOf('A', 'B', 'C')
     println(set) // [A, B, C]
@@ -286,7 +287,7 @@ fun main() {
 
 
 ```
-//21
+//22
 fun main() {
     val set: Set<Char> = setOf('A', 'B', 'C')
     println(set) // [A, B, C]
@@ -297,7 +298,7 @@ fun main() {
 
 
 ```
-//22
+//23
 fun main() {
     var set = setOf("A", "B")
     set = set + "C"
@@ -313,7 +314,7 @@ fun main() {
 
 
 ```
-//23
+//24
 fun main() {
     val mutable = mutableSetOf("A", "B")
     mutable.add("C")
@@ -327,7 +328,7 @@ fun main() {
 
 
 ```
-//24
+//25
 fun main() {
     val set = setOf("A", "B", "C", "B")
     println(set) // [A, B, C]
@@ -336,7 +337,7 @@ fun main() {
 
 
 ```
-//25
+//26
 fun main() {
     val set = setOf("A", "B", "C")
     println(set + "D") // [A, B, C, D]
@@ -351,7 +352,7 @@ fun main() {
 
 
 ```
-//26
+//27
 // by default, each object from a regular class is unique
 class Cat(val name: String)
 
@@ -374,7 +375,7 @@ fun main() {
 
 
 ```
-//27
+//28
 fun main() {
     val names = listOf("Jake", "John", "Jake", "James", "Jan")
     println(names) // [Jake, John, Jake, James, Jan]
@@ -385,7 +386,7 @@ fun main() {
 
 
 ```
-//28
+//29
 fun main() {
     val set = setOf('A', 'B', 'C')
     println(set.size) // 3
@@ -394,7 +395,7 @@ fun main() {
 
 
 ```
-//29
+//30
 fun main() {
     val set = setOf('A', 'B', 'C')
     println(set.size == 0) // false
@@ -408,7 +409,7 @@ fun main() {
 
 
 ```
-//30
+//31
 fun main() {
     val letters = setOf('A', 'B', 'C')
     println(letters.contains('A')) // true
@@ -420,7 +421,7 @@ fun main() {
 
 
 ```
-//31
+//32
 fun main() {
     val letters = setOf("A", "B", "C")
     println("A" !in letters) // false
@@ -430,7 +431,7 @@ fun main() {
 
 
 ```
-//32
+//33
 fun main() {
     val letters = setOf('A', 'B', 'C')
     for (letter in letters) {
@@ -470,7 +471,7 @@ class TokenRepository {
 
 
 ```
-//33
+//34
 fun main() {
     val capitals = mapOf(
         "USA" to "Washington DC",
@@ -486,7 +487,7 @@ fun main() {
 
 
 ```
-//34
+//35
 fun main() {
     val capitals: Map<String, String> = mapOf(
         "USA" to "Washington DC",
@@ -502,7 +503,7 @@ fun main() {
 
 
 ```
-//35
+//36
 fun main() {
     val alphabet: Map<Char, Int> =
         mapOf('A' to 1, 'B' to 2, 'C' to 3)
@@ -515,7 +516,7 @@ fun main() {
 
 
 ```
-//36
+//37
 fun main() {
     val map1 = mapOf('A' to "Alex", 'B' to "Bob")
     val map2 = map1 + ('C' to "Celina")
@@ -531,7 +532,7 @@ fun main() {
 
 
 ```
-//37
+//38
 fun main() {
     val map1 = mapOf('A' to "Alex", 'B' to "Bob")
     val map2 = map1 + ('B' to "Barbara")
@@ -542,7 +543,7 @@ fun main() {
 
 
 ```
-//38
+//39
 fun main() {
     val map1 = mapOf('A' to "Alex", 'B' to "Bob")
     val map2 = map1 - 'B'
@@ -553,7 +554,7 @@ fun main() {
 
 
 ```
-//39
+//40
 fun main() {
     val map = mapOf('A' to "Alex", 'B' to "Bob")
     println('A' in map) // true
@@ -565,7 +566,7 @@ fun main() {
 
 
 ```
-//40
+//41
 fun main() {
     val map = mapOf('A' to "Alex", 'B' to "Bob")
     println(map.size) // 2
@@ -574,7 +575,7 @@ fun main() {
 
 
 ```
-//41
+//42
 fun main() {
     val map = mapOf('A' to "Alex", 'B' to "Bob")
     for (entry in map) {
@@ -587,7 +588,7 @@ fun main() {
 
 
 ```
-//42
+//43
 fun main() {
     val map = mapOf('A' to "Alex", 'B' to "Bob")
     for ((letter, name) in map) {
@@ -600,7 +601,7 @@ fun main() {
 
 
 ```
-//43
+//44
 fun main() {
     val map: MutableMap<Char, String> =
         mutableMapOf('A' to "Alex", 'B' to "Bob")
@@ -614,7 +615,7 @@ fun main() {
 
 
 ```
-//44
+//45
 fun main() {
     val arr: Array<String> = arrayOf("A", "B", "C")
     println(arr[0]) // A
@@ -634,7 +635,7 @@ fun main() {
 
 
 ```
-//45
+//46
 fun main() {
     val arr1 = arrayOf("A", "B", "C")
     val arr2 = arrayOf("A", "B", "C")
@@ -646,7 +647,7 @@ fun main() {
 
 
 ```
-//46
+//47
 // JVM implementation
 operator fun <T> Array<T>.plus(element: T): Array<T> {
     val index = size
@@ -666,7 +667,7 @@ fun main() {
 
 
 ```
-//47
+//48
 fun main() {
     val arr1: Array<String> = arrayOf("A", "B", "C")
     val list: List<String> = arr1.toList()
@@ -678,7 +679,7 @@ fun main() {
 
 
 ```
-//48
+//49
 fun main() {
     val doubles: DoubleArray = doubleArrayOf(2.71, 3.14, 9.8)
     val chars: CharArray = charArrayOf('X', 'Y', 'Z')
@@ -693,7 +694,7 @@ fun main() {
 
 
 ```
-//49
+//50
 fun markdownList(vararg lines: String): String {
     // the type of lines is Array<String>
     var str = ""
@@ -716,6 +717,7 @@ fun main() {
 
 
 ```
+//51
 fun <T> listOf(vararg elements: T): List<T> =
     if (elements.size > 0) elements.asList() else emptyList()
 

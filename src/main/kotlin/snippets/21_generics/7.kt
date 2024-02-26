@@ -1,15 +1,17 @@
 package f_21_generics.s_7
 
-open class C<T>
-interface I<T>
-class A<T> : C<T>(), I<T>
-
-fun main() {
-    val a: A<Int> = A<Int>()
-    val c1: C<Int> = a
-    val i1: I<Int> = a
-
-    val a1: A<String> = A<String>()
-    val c2: C<String> = a1
-    val i2: I<String> = a1
+interface List<out E> : Collection<E> {
+    override val size: Int
+    override fun isEmpty(): Boolean
+    override fun contains(element: @UnsafeVariance E): Boolean
+    override fun iterator(): Iterator<E>
+    override fun containsAll(
+        elements: Collection<@UnsafeVariance E>
+    ): Boolean
+    operator fun get(index: Int): E
+    fun indexOf(element: @UnsafeVariance E): Int
+    fun lastIndexOf(element: @UnsafeVariance E): Int
+    fun listIterator(): ListIterator<E>
+    fun listIterator(index: Int): ListIterator<E>
+    fun subList(fromIndex: Int, toIndex: Int): List<E>
 }

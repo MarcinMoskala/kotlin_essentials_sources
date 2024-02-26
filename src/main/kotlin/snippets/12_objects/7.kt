@@ -1,7 +1,17 @@
 package f_12_objects.s_7
 
-data object ABC
+object Point {
+    var x = 0
+    var y = 0
+}
 
 fun main() {
-    println(ABC) // ABC
+    println(Point.x) // 0
+    Point.y = 10
+    println(Point.y) // 10
+
+    val p = Point
+    p.x = 20
+    println(Point.x) // 20
+    println(Point.y) // 10
 }

@@ -78,6 +78,7 @@ fun main() {
 
 
 ```
+//3
 data class Player(
    val id: Int,
    val name: String,
@@ -89,7 +90,7 @@ val player = Player(0, "Gecko", 9999)
 
 
 ```
-//3
+//4
 class FakeUserRepository
 
 fun main() {
@@ -103,7 +104,7 @@ fun main() {
 
 
 ```
-//4
+//5
 data class Player(
    val id: Int,
    val name: String,
@@ -121,7 +122,7 @@ fun main() {
 
 
 ```
-//5
+//6
 class FakeUserRepository
 
 fun main() {
@@ -134,7 +135,7 @@ fun main() {
 
 
 ```
-//6
+//7
 data class Player(
    val id: Int,
    val name: String,
@@ -158,7 +159,7 @@ override fun equals(other: Any?): Boolean = other is Player &&
 
 
 ```
-//7
+//8
 data class Player(
    val id: Int,
    val name: String,
@@ -185,7 +186,7 @@ fun copy(
 
 
 ```
-//8
+//9
 data class Player(
    val id: Int,
    val name: String,
@@ -207,7 +208,7 @@ fun main() {
 
 
 ```
-//9
+//10
 data class StudentGrades(
    val studentId: String,
    // Code smell: Avoid using mutable objects in data classes
@@ -230,7 +231,7 @@ fun main() {
 
 
 ```
-//10
+//11
 data class StudentGrades(
    val studentId: String,
    val grades: List<Int>
@@ -252,6 +253,7 @@ fun main() {
 
 
 ```
+//12
 data class User(
    val name: String,
    val surname: String,
@@ -267,7 +269,7 @@ data class User(
 
 
 ```
-//11
+//13
 data class Player(
    val id: Int,
    val name: String,
@@ -294,7 +296,7 @@ val pts: Int = player.component3()
 
 
 ```
-//12
+//14
 fun main() {
    val visited = listOf("Spain", "Morocco", "India")
    val (first, second, third) = visited
@@ -330,7 +332,7 @@ print("It is $name $surname!") // It is Elon Reeve!
 
 
 ```
-//13
+//15
 data class User(
    val name: String,
    val surname: String,
@@ -349,7 +351,7 @@ fun main() {
 
 
 ```
-//14
+//16
 data class Dog(
    val name: String,
 ) {
@@ -372,7 +374,7 @@ fun main() {
 
 
 ```
-//15
+//17
 data class FullName(
    val name: String,
    val surname: String,
@@ -415,12 +417,13 @@ data class Triple<out A, out B, out C>(
 
 
 ```
+//18
 infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
 ```
 
 
 ```
-//16
+//19
 fun main() {
    val p1: Pair<String, Int> = "ABC" to 123
    println(p1) // (ABC, 123)
@@ -450,7 +453,7 @@ val map = mapOf(1 to "San Francisco", 2 to "Amsterdam")
 
 
 ```
-//17
+//20
 fun String.parseName(): Pair<String, String>? {
    val indexOfLastSpace = this.trim().lastIndexOf(' ')
    if (indexOfLastSpace < 0) return null
@@ -475,7 +478,7 @@ print("His name is $firstName") // His name is Moskała
 
 
 ```
-//18
+//21
 data class FullName(
    val firstName: String,
    val lastName: String

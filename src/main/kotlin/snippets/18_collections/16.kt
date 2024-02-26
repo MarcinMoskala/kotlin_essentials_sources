@@ -1,9 +1,8 @@
 package f_18_collections.s_16
 
 fun main() {
-    val mutable = mutableListOf("A", "B", "C")
-    mutable[1] = "X"
-    println(mutable) // [A, X, C]
-    mutable.set(1, "Y")
-    println(mutable) // [A, Y, C]
+    val list = listOf("A", "B")
+    println(list.indexOf("A")) // 0
+    println(list.indexOf("B")) // 1
+    println(list.indexOf("Z")) // -1
 }

@@ -1,12 +1,8 @@
 package f_06_functions.s_12
 
-fun addOneAndPrint(list: MutableList<Int> = mutableListOf()) {
-    list.add(1)
-    println(list)
-}
-
 fun main() {
-    addOneAndPrint() // [1]
-    addOneAndPrint() // [1]
-    addOneAndPrint() // [1]
+    val list = listOf(1, 2, 3, 4)
+    println(list.joinToString()) // 1, 2, 3, 4
+    println(list.joinToString(separator = "-")) //  1-2-3-4
+    println(list.joinToString(limit = 2)) //  1, 2, ...
 }

@@ -1,19 +1,19 @@
 package f_17_extensions.s_7
 
-open class View
-class Button : View()
-
-fun printMe(view: View) {
-    println("I'm a View")
+open class View {
+   open fun printMe() {
+       println("I'm a View")
+   }
 }
-
-fun printMe(button: Button) {
-    println("I'm a Button")
+class Button: View() {
+   override fun printMe() {
+       println("I'm a Button")
+   }
 }
 
 fun main() {
-    val button: Button = Button()
-    printMe(button) // I'm a Button
-    val view: View = button
-    printMe(view) // I'm a View
+   val button: Button = Button()
+   button.printMe() // I'm a Button
+   val view: View = button
+   view.printMe() // I'm a Button
 }

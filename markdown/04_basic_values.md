@@ -58,6 +58,7 @@ fun main() {
 
 
 ```
+//6
 abstract class Number {
     abstract fun toDouble(): Double
     abstract fun toFloat(): Float
@@ -71,7 +72,7 @@ abstract class Number {
 
 
 ```
-//6
+//7
 fun main() {
     val b: Byte = 123
     val l: Long = b.toLong()
@@ -84,7 +85,7 @@ fun main() {
 
 
 ```
-//7
+//8
 fun main() {
     val i1 = 12
     val i2 = 34
@@ -104,7 +105,7 @@ fun main() {
 
 
 ```
-//8
+//9
 fun main() {
     println(5 / 2) // 2, not 2.5
 }
@@ -112,7 +113,7 @@ fun main() {
 
 
 ```
-//9
+//10
 fun main() {
     println(5.toDouble() / 2) // 2.5
 }
@@ -120,7 +121,7 @@ fun main() {
 
 
 ```
-//10
+//11
 fun main() {
     println(1 % 3) // 1
     println(2 % 3) // 2
@@ -138,7 +139,7 @@ fun main() {
 
 
 ```
-//11
+//12
 fun main() {
     var i = 1
     println(i) // 1
@@ -177,7 +178,7 @@ fun main() {
 
 
 ```
-//12
+//13
 fun main() {
     println(0b0101 and 0b0001) // 1, that is 0b0001
     println(0b0101 or 0b0001)  // 5, that is 0b0101
@@ -190,7 +191,7 @@ fun main() {
 
 
 ```
-//13
+//14
 fun main() {
     println(0.1 + 0.2) // 0.30000000000000004
     println(2147483647 + 1) // -2147483648
@@ -199,7 +200,7 @@ fun main() {
 
 
 ```
-//14
+//15
 import java.math.BigDecimal
 import java.math.BigInteger
 
@@ -224,7 +225,7 @@ fun main() {
 
 
 ```
-//15
+//16
 import java.math.BigDecimal
 import java.math.BigInteger
 
@@ -247,7 +248,7 @@ fun main() {
 
 
 ```
-//16
+//17
 fun main() {
     val b1: Boolean = true
     println(b1) // true
@@ -258,7 +259,7 @@ fun main() {
 
 
 ```
-//17
+//18
 fun main() {
     println(10 == 10) // true
     println(10 == 11) // false
@@ -269,7 +270,7 @@ fun main() {
 
 
 ```
-//18
+//19
 fun main() {
     println(10 > 10) // false
     println(10 > 11) // false
@@ -291,7 +292,7 @@ fun main() {
 
 
 ```
-//19
+//20
 fun main() {
     println(true && true) // true
     println(true && false) // false
@@ -310,7 +311,7 @@ fun main() {
 
 
 ```
-//20
+//21
 fun main() {
     println('A') // A
     println('Z') // Z
@@ -319,7 +320,7 @@ fun main() {
 
 
 ```
-//21
+//22
 fun main() {
     println('A'.code) // 65
 }
@@ -327,7 +328,7 @@ fun main() {
 
 
 ```
-//22
+//23
 fun main() {
     println('\u00A3') // £
 }
@@ -335,7 +336,7 @@ fun main() {
 
 
 ```
-//23
+//24
 fun main() {
     val text1 = "ABC"
     println(text1) // ABC
@@ -346,7 +347,7 @@ fun main() {
 
 
 ```
-//24
+//25
 fun main() {
     val text1 = "Let\'s say:\n\"Hooray\""
     println(text1)
@@ -365,7 +366,7 @@ fun main() {
 
 
 ```
-//25
+//26
 fun main() {
     val text = """
    Let's say:
@@ -389,7 +390,7 @@ fun main() {
 
 
 ```
-//26
+//27
 fun main() {
     val name = "Cookie"
     val surname = "DePies"
@@ -416,7 +417,7 @@ fun main() {
 
 
 ```
-//27
+//28
 fun main() {
     val text1 = """ABC\nDEF"""
     println(text1) // ABC\nDEF
@@ -429,7 +430,7 @@ fun main() {
 
 
 ```
-//28
+//29
 fun main() {
     val text1 = "ABC"
     val text2 = "DEF"

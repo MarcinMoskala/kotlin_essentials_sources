@@ -1,11 +1,13 @@
 package f_18_collections.s_2
 
 fun main() {
-    var list = listOf("A", "B")
-    list = list + "C"
-    println(list) // [A, B, C]
-    list = list + listOf("D", "E")
-    println(list) // [A, B, C, D, E]
-    list = listOf("Z") + list
-    println(list)  // [Z, A, B, C, D, E]
+    var a = 100
+    a = a + 10
+    a += 1
+    println(a) // 111
+
+    var str = "A"
+    str = str + "B"
+    str += "C"
+    println(str) // ABC
 }

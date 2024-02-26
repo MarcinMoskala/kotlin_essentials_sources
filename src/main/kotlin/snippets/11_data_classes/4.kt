@@ -1,15 +1,11 @@
 package f_11_data_classes.s_4
 
-data class Player(
-   val id: Int,
-   val name: String,
-   val points: Int
-)
+class FakeUserRepository
 
 fun main() {
-   val player = Player(0, "Gecko", 9999)
-   println(player) 
-   // Player(id=0, name=Gecko, points=9999)
-   println("Player: $player")
-   // Player: Player(id=0, name=Gecko, points=9999)
+   val repository1 = FakeUserRepository()
+   val repository2 = FakeUserRepository()
+   println(repository1) // e.g. FakeUserRepository@8efb846
+   println(repository1) // e.g. FakeUserRepository@8efb846
+   println(repository2) // e.g. FakeUserRepository@2a84aee7
 }

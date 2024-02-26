@@ -1,17 +1,16 @@
 package f_19_operators.s_16
 
-class CheerUseCase {
-    operator fun invoke(who: String) {
-        println("Hello, $who")
-    }
-}
-
 fun main() {
-    val hello = {
-        println("Hello")
-    }
-    hello() // Hello
+    val names = mutableListOf("Jake", "Ben")
+    names += "Jon"
+    names -= "Ben"
+    println(names) // [Jake, Jon]
 
-    val cheerUseCase = CheerUseCase()
-    cheerUseCase("Reader") // Hello, Reader
+    val tools = mutableMapOf(
+        "Grass" to "Lawnmower",
+        "Nail" to "Hammer"
+    )
+    tools += "Screw" to "Screwdriver"
+    tools -= "Grass"
+    println(tools) // {Nail=Hammer, Screw=Screwdriver}
 }

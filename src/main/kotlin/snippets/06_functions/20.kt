@@ -1,15 +1,18 @@
 package f_06_functions.s_20
 
-fun printName(
-    name: String,
-    surname: String, // <- trailing comma
-) {
-    println("$name $surname")
+class View
+class ViewInteractor {
+    infix fun clicks(view: View) { 
+        // ...
+    }
 }
 
 fun main() {
-    printName(
-        name = "Norbert",
-        surname = "Moskała", // <- trailing comma
-    )
+    val aView = View()
+    val interactor = ViewInteractor()
+
+    // regular notation
+    interactor.clicks(aView)
+    // infix notation
+    interactor clicks aView
 }

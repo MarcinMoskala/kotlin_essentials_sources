@@ -1,16 +1,12 @@
 package f_19_operators.s_11
 
-fun main() {
-    val mutableList = mutableListOf("A", "B", "C")
-    println(mutableList[1]) // B
-    mutableList[2] = "D"
-    println(mutableList) // [A, B, D]
-
-    val animalFood = mutableMapOf(
-        "Dog" to "Meat",
-        "Goat" to "Grass"
-    )
-    println(animalFood["Dog"]) // Meat
-    animalFood["Cat"] = "Meat"
-    println(animalFood["Cat"]) // Meat
+public interface Comparable<in T> {
+    /**
+     * Compares this object with the specified object for
+     * order. Returns zero if this object is equal to the
+     * specified [other] object, a negative number if it's
+     * less than [other], or a positive number if it's
+     * greater than [other].
+     */
+    public operator fun compareTo(other: T): Int
 }

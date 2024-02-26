@@ -2,8 +2,8 @@ package f_18_collections.s_42
 
 fun main() {
     val map = mapOf('A' to "Alex", 'B' to "Bob")
-    for ((letter, name) in map) {
-        println("$letter is for $name")
+    for (entry in map) {
+        println("${entry.key} is for ${entry.value}")
     }
 }
 // A is for Alex

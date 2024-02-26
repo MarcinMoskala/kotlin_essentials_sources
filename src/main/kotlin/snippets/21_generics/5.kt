@@ -1,17 +1,13 @@
 package f_21_generics.s_5
 
-interface Consumer<T> {
-    fun consume(value: T)
-}
-class DogFood
-
-class Dog : Consumer<DogFood> {
-    override fun consume(value: DogFood) {
-        println("Mlask mlask")
-    }
-}
-
 fun main() {
-    val dog: Dog = Dog()
-    val consumer: Consumer<DogFood> = dog
+    val letters = ArrayList<String>()
+    letters.add("A") // the argument must be of type String
+    letters.add("B") // the argument must be of type String
+    // The type of letters is List<String>
+    val a = letters[0] // the type of a is String
+    println(a) // A
+    for (l in letters) { // the type of l is String
+        println(l) // first A, then B
+    }
 }

@@ -4,17 +4,19 @@ import java.math.BigDecimal
 import java.math.BigInteger
 
 fun main() {
-    val bd1 = BigDecimal("1.2")
-    val bd2 = BigDecimal("3.4")
-    println(bd1 + bd2) // 4.6
-    println(bd1 - bd2) // -2.2
-    println(bd1 * bd2) // 4.08
-    println(bd1 / bd2) // 0.4
+    val i = 10
+    val l = 10L
+    val d = 10.0
+    val f = 10.0F
 
-    val bi1 = BigInteger("12")
-    val bi2 = BigInteger("34")
-    println(bi1 + bi2) // 46
-    println(bi1 - bi2) // -22
-    println(bi1 * bi2) // 408
-    println(bi1 / bi2) // 0
+    val bd1: BigDecimal = BigDecimal(123)
+    val bd2: BigDecimal = BigDecimal("123.00")
+    val bd3: BigDecimal = i.toBigDecimal()
+    val bd4: BigDecimal = l.toBigDecimal()
+    val bd5: BigDecimal = d.toBigDecimal()
+    val bd6: BigDecimal = f.toBigDecimal()
+    val bi1: BigInteger = BigInteger.valueOf(123)
+    val bi2: BigInteger = BigInteger("123")
+    val bi3: BigInteger = i.toBigInteger()
+    val bi4: BigInteger = l.toBigInteger()
 }

@@ -1,5 +1,15 @@
 package f_19_operators.s_18
 
 fun main() {
-    println((-1).plus(1)) // 0
+    var i = 10
+    println(i++) // 10
+    println(i) // 11
+    println(++i) // 12
+    println(i) // 12
+
+    i = 10
+    println(i--) // 10
+    println(i) // 9
+    println(--i) // 8
+    println(i) // 8
 }

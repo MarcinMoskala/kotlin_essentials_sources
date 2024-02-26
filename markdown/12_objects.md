@@ -1,4 +1,5 @@
 ```
+//1
 class A
 
 // Using a constructor to create an object
@@ -7,11 +8,13 @@ val a = A()
 
 
 ```
+//2
 val instance = object {}
 ```
 
 
 ```
+//3
 class Box {
     var value: Any? = NOT_SET
 
@@ -30,12 +33,13 @@ fun synchronizedOperation() = synchronized(LOCK) {
 
 
 ```
+//4
 private val NOT_SET = Any()
 ```
 
 
 ```
-//1
+//5
 data class User(val name: String)
 
 interface UserProducer {
@@ -57,7 +61,7 @@ fun main() {
 
 
 ```
-//2
+//6
 class Robot {
     // Possible, but rarely useful
     // prefer regular member properties instead
@@ -122,7 +126,7 @@ taskNameView.addTextChangedListener(object : TextWatcher {
 
 
 ```
-//3
+//7
 object Point {
     var x = 0
     var y = 0
@@ -142,7 +146,7 @@ fun main() {
 
 
 ```
-//4
+//8
 data class User(val name: String)
 
 interface UserProducer {
@@ -164,6 +168,7 @@ fun main() {
 
 
 ```
+//9
 // Kotlin
 class User {
     object Producer {
@@ -205,7 +210,7 @@ val user: User = User.Companion.empty()
 
 
 ```
-//5
+//10
 import java.math.BigDecimal
 import java.math.MathContext
 import java.math.RoundingMode.HALF_EVEN
@@ -266,7 +271,7 @@ fun main() {
 
 
 ```
-//6
+//11
 import java.math.BigDecimal
 import java.math.MathContext
 import java.math.RoundingMode.HALF_EVEN
@@ -383,7 +388,7 @@ val name2 = context[CoroutineName.Key]
 
 
 ```
-//7
+//12
 data object ABC
 
 fun main() {
@@ -393,6 +398,7 @@ fun main() {
 
 
 ```
+//13
 class Product(
     val code: String,
     val price: Double,
@@ -409,6 +415,7 @@ class Product(
 
 
 ```
+//14
 class Product(
     val code: String,
     val price: Double,

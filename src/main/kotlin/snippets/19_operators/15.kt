@@ -1,15 +1,11 @@
 package f_19_operators.s_15
 
 fun main() {
-    var i = 10
-    println(i++) // 10
-    println(i) // 11
-    println(++i) // 12
-    println(i) // 12
+    var str = "ABC"
+    str += "D" // translates to str = str + "D"
+    println(str) // ABCD
 
-    i = 10
-    println(i--) // 10
-    println(i) // 9
-    println(--i) // 8
-    println(i) // 8
+    var l = listOf("A", "B", "C")
+    l += "D" // translates to l = l + "D"
+    println(l) // [A, B, C, D]
 }

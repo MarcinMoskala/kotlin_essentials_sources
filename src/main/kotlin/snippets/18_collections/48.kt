@@ -1,12 +1,9 @@
 package f_18_collections.s_48
 
 fun main() {
-    val doubles: DoubleArray = doubleArrayOf(2.71, 3.14, 9.8)
-    val chars: CharArray = charArrayOf('X', 'Y', 'Z')
-
-    val accepts: List<Boolean> = listOf(true, false, true)
-    val acceptsArr: BooleanArray = accepts.toBooleanArray()
-
-    val ints: Set<Int> = setOf(2, 4, 8, 10)
-    val intsArr: IntArray = ints.toIntArray()
+    val arr1: Array<String> = arrayOf("A", "B", "C")
+    val list: List<String> = arr1.toList()
+    val arr2: Array<String> = list.toTypedArray()
+    val set: Set<String> = arr2.toSet()
+    val arr3: Array<String> = set.toTypedArray()
 }

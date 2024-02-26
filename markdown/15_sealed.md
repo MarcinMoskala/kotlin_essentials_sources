@@ -1,4 +1,5 @@
 ```
+//1
 interface Result
 class Success(val data: String) : Result
 class Failure(val exception: Throwable) : Result
@@ -6,6 +7,7 @@ class Failure(val exception: Throwable) : Result
 
 
 ```
+//2
 abstract class Result
 class Success(val data: String) : Result()
 class Failure(val exception: Throwable) : Result()
@@ -42,7 +44,7 @@ class Failure(val exception: Throwable) : Result()
 
 
 ```
-//1
+//3
 fun commentValue(value: String) = when {
     value.isEmpty() -> "Should not be empty"
     value.length < 5 -> "Too short"
@@ -58,6 +60,7 @@ fun main() {
 
 
 ```
+//4
 enum class PaymentType {
     CASH,
     CARD,
@@ -89,6 +92,7 @@ fun handle(response: Response<String>) {
 
 
 ```
+//5
 sealed class MathOperation
 class Plus(val left: Int, val right: Int) : MathOperation()
 class Minus(val left: Int, val right: Int) : MathOperation()
@@ -119,7 +123,7 @@ fun BinaryTree.height(): Int = when (this) {
 
 
 ```
-//2
+//6
 sealed interface Parent
 class A : Parent
 class B : Parent

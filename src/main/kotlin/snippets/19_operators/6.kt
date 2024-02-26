@@ -1,6 +1,9 @@
 package f_19_operators.s_6
 
 fun main() {
-    println(5 in 1..10) // true
-    println(11 in 1..10) // false
+    val letters = setOf("A", "B", "C")
+    println("A" in letters) // true
+    println("D" in letters) // false
+    println(letters.contains("A")) // true
+    println(letters.contains("D")) // false
 }

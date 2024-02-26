@@ -1,8 +1,8 @@
 package f_18_collections.s_15
 
 fun main() {
-    val list = listOf("A", "B")
-    println(list.indexOf("A")) // 0
-    println(list.indexOf("B")) // 1
-    println(list.indexOf("Z")) // -1
+    val map = mutableMapOf("A" to 1, "B" to 2)
+    println(map.getOrPut("A") { 3 }) // 1
+    println(map.getOrPut("C") { 3 }) // 3
+    println(map) // {A=1, B=2, C=3}
 }

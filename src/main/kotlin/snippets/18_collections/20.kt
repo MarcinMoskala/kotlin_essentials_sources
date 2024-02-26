@@ -1,6 +1,8 @@
 package f_18_collections.s_20
 
 fun main() {
-    val set = setOf('A', 'B', 'C')
-    println(set) // [A, B, C]
+    val letters = listOf("A", "B", "C")
+    for (letter in letters) {
+        print(letter)
+    }
 }

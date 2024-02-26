@@ -1,6 +1,11 @@
 package f_18_collections.s_6
 
 fun main() {
-    val list = listOf("A", "B", "C")
-    println(list) // [A, B, C]
+    val list: List<Char> = listOf('A', 'B', 'C')
+    val mutableList: MutableList<Char> = list.toMutableList()
+    val set: Set<Char> = mutableList.toSet()
+    val mutableSet: MutableList<Char> = set.toMutableList()
+    val array: Array<Char> = mutableSet.toTypedArray()
+    val charArray: CharArray = array.toCharArray()
+    val list2: List<Char> = charArray.toList()
 }

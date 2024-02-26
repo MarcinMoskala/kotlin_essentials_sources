@@ -7,7 +7,7 @@ data class Player(
 )
 
 fun main() {
-   println(Player(0, "Gecko", 9999).hashCode()) // 2129010918
-   println(Player(0, "Gecko", 9999).hashCode()) // 2129010918
-   println(Player(0, "Ross", 9999).hashCode())  // 79159602
+   val player = Player(0, "Gecko", 9999)
+   println(player == Player(0, "Gecko", 9999)) // true
+   println(player == Player(0, "Ross", 9999)) // false
 }

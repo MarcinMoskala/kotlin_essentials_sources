@@ -1,20 +1,19 @@
 package f_11_data_classes.s_9
 
-data class StudentGrades(
-   val studentId: String,
-   // Code smell: Avoid using mutable objects in data classes
-   val grades: MutableList<Int>
+data class Player(
+   val id: Int,
+   val name: String,
+   val points: Int
 )
 
 fun main() {
-   val grades1 = StudentGrades("1", mutableListOf())
-   val grades2 = grades1.copy(studentId = "2")
-   println(grades1) // Grades(studentId=1, grades=[])
-   println(grades2) // Grades(studentId=2, grades=[])
-   grades1.grades.add(5)
-   println(grades1) // Grades(studentId=1, grades=[5])
-   println(grades2) // Grades(studentId=2, grades=[5])
-   grades2.grades.add(1)
-   println(grades1) // Grades(studentId=1, grades=[5, 1])
-   println(grades2) // Grades(studentId=2, grades=[5, 1])
+   val p = Player(0, "Gecko", 9999)
+
+   println(p.copy()) // Player(id=0, name=Gecko, points=9999)
+
+   println(p.copy(id = 1, name = "New name"))
+   // Player(id=1, name=New name, points=9999)
+
+   println(p.copy(points = p.points + 1))
+   // Player(id=0, name=Gecko, points=10000)
 }

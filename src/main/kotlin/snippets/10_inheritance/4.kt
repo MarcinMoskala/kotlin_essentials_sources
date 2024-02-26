@@ -1,23 +1,19 @@
 package f_10_inheritance.s_4
 
-open class Dog {
-    open fun seeFriend() {
-        println("Wave its tail")
-    }
-}
+open class Animal(val name: String)
 
-class BorderCollie : Dog() {
-    override fun seeFriend() {
-        println("Lie down")
-        super.seeFriend()
-    }
-}
+class Dog(name: String) : Animal(name)
+
+class Cat(name: String) : Animal("Mr $name")
+
+class Human(
+   firstName: String,
+   lastName: String,
+) : Animal("$firstName $lastName")
 
 fun main() {
-    val dog = Dog()
-    dog.seeFriend() // Wave its tail
-    val borderCollie = BorderCollie()
-    borderCollie.seeFriend()
-    // Lie down
-    // Wave its tail
+   val dog = Dog("Cookie")
+   println(dog.name) // Cookie
+   val cat = Cat("MiauMiau")
+   println(cat.name) // Mr MiauMiau
 }

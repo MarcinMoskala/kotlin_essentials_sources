@@ -1,17 +1,21 @@
 package f_21_generics.s_2
 
-import kotlin.random.Random
-
-// The result type is the same as the argument type
-fun <T> id(value: T): T = value
-
-// The result type is the closest supertype of arguments
-fun <T> randomOf(a: T, b: T): T =
-    if (Random.nextBoolean()) a else b
+fun <T> a() {}
+fun <T1, T2> b() {}
+fun <T> c(t: T) {}
+fun <T1, T2> d(a: T1, b: T2) {}
+fun <T> e(): T = TODO()
 
 fun main() {
-    val a = id(10) // Inferred a type is Int
-    val b = id("AAA") // Inferred b type is String
-    val c = randomOf("A", "B") // Inferred c type is String
-    val d = randomOf(1, 1.5) // Inferred d type is Number
+    // Type arguments specified explicitly
+    a<Int>()
+    a<String>()
+    b<Double, Char>()
+    b<Float, Long>()
+
+    // Inferred type arguments
+    c(10) // The inferred type of T is Int
+    d("AAA", 10.0)
+    // The inferred type of T1 is String, and of T2 is Double
+    val e: Boolean = e() // The inferred type of T is Boolean
 }

@@ -1,8 +1,6 @@
 package f_06_functions.s_10
 
 fun main() {
-    val list = listOf(1, 2, 3, 4)
-    println(list.joinToString()) // 1, 2, 3, 4
-    println(list.joinToString(separator = "-")) //  1-2-3-4
-    println(list.joinToString(limit = 2)) //  1, 2, ...
+    println(listOf(1, 3, 5, 6)) // [1, 3, 5, 6]
+    println(listOf("A", "B", "C")) // [A, B, C]
 }

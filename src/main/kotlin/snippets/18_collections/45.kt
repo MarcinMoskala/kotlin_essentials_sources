@@ -1,9 +1,17 @@
 package f_18_collections.s_45
 
 fun main() {
-    val arr1 = arrayOf("A", "B", "C")
-    val arr2 = arrayOf("A", "B", "C")
-    println(arr1 == arr2) // false
-    println(arr1) // [Ljava.lang.String;@4f023edb
-    println(arr2) // [Ljava.lang.String;@3a71f4dd
+    val arr: Array<String> = arrayOf("A", "B", "C")
+    println(arr[0]) // A
+    println(arr.get(0)) // A
+    println(arr[1]) // B
+    arr[1] = "D"
+    println(arr[1]) // D
+    arr.set(2, "E")
+    println(arr[2]) // E
+    println(arr.size) // 3
+    for (e in arr) {
+        print(e)
+    }
+    // ADE
 }

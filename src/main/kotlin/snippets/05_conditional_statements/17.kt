@@ -1,19 +1,8 @@
 package f_05_conditional_statements.s_17
 
-fun main() {
-    var i = 1
-    // while-statement
-    while (i < 10) {
-        print(i)
-        i *= 2
+fun lengthIfString(a: Any): Int {
+    if (a is String) {
+        return a.length // the type of a here is String
     }
-    // 1248
-
-    var j = 1
-    // do-while statement
-    do {
-        print(j)
-        j *= 2
-    } while (j < 10)
-    // 1248
+    return 0
 }

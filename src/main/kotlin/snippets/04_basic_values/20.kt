@@ -1,6 +1,16 @@
 package f_04_basic_values.s_20
 
 fun main() {
-    println('A') // A
-    println('Z') // Z
+    println(true && true) // true
+    println(true && false) // false
+    println(false && true) // false
+    println(false && false) // false
+
+    println(true || true) // true
+    println(true || false) // true
+    println(false || true) // true
+    println(false || false) // false
+
+    println(!true) // false
+    println(!false) // true
 }

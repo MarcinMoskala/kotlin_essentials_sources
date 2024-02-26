@@ -1,10 +1,16 @@
 package f_19_operators.s_14
 
-data class Point(val x: Int, val y: Int)
-
-operator fun Point.unaryMinus() = Point(-x, -y)
-
 fun main() {
-    val point = Point(10, 20)
-    println(-point)  // prints "Point(x=-10, y=-20)"
+    val mutableList = mutableListOf("A", "B", "C")
+    println(mutableList[1]) // B
+    mutableList[2] = "D"
+    println(mutableList) // [A, B, D]
+
+    val animalFood = mutableMapOf(
+        "Dog" to "Meat",
+        "Goat" to "Grass"
+    )
+    println(animalFood["Dog"]) // Meat
+    animalFood["Cat"] = "Meat"
+    println(animalFood["Cat"]) // Meat
 }

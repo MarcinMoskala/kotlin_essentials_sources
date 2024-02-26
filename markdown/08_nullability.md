@@ -89,6 +89,7 @@ fun sendData(dataWrapped: Wrapper<Data>) {
 
 
 ```
+//4
 fun printLengthIfNotNull(str: String?) {
     if (str != null) {
         println(str.length) // str smart-casted to String
@@ -98,6 +99,7 @@ fun printLengthIfNotNull(str: String?) {
 
 
 ```
+//5
 fun printLengthIfNotNull(str: String?) {
     if (str == null) return
     println(str.length) // str smart-casted to String
@@ -106,6 +108,7 @@ fun printLengthIfNotNull(str: String?) {
 
 
 ```
+//6
 fun printLengthIfNotNullOrThrow(str: String?) {
     if (str == null) throw Error()
     println(str.length) // str smart-casted to String
@@ -114,6 +117,7 @@ fun printLengthIfNotNullOrThrow(str: String?) {
 
 
 ```
+//7
 fun printLengthIfNotNull(str: String?) {
     if (str != null && str.length > 0) {
         // str in expression above smart-casted to String
@@ -124,6 +128,7 @@ fun printLengthIfNotNull(str: String?) {
 
 
 ```
+//8
 fun printLengthIfNotNull(str: String?) {
     if (str == null || str.length == 0) {
         // str in expression above smart-casted to String
@@ -134,6 +139,7 @@ fun printLengthIfNotNull(str: String?) {
 
 
 ```
+//9
 fun printLengthIfNotNullOrThrow(str: String?) {
     requireNotNull(str) // str smart-casted to String
     println(str.length)
@@ -142,7 +148,7 @@ fun printLengthIfNotNullOrThrow(str: String?) {
 
 
 ```
-//4
+//10
 fun main() {
     println("A" ?: "B") // A
     println(null ?: "B") // B
@@ -153,7 +159,7 @@ fun main() {
 
 
 ```
-//5
+//11
 class User(val name: String)
 
 fun printName(user: User?) {
@@ -169,7 +175,7 @@ fun main() {
 
 
 ```
-//6
+//12
 fun check(str: String?) {
     println("The value: \"$str\"")
     println("The value or empty: \"${str.orEmpty()}\"")
@@ -203,7 +209,7 @@ fun main() {
 
 
 ```
-//7
+//13
 fun check(list: List<Int>?) {
     println("The list: \"$list\"")
     println("The list or empty: \"${list.orEmpty()}\"")
@@ -265,7 +271,7 @@ class UserServiceTest {
 
 
 ```
-//8
+//14
 lateinit var text: String
 
 fun main() {

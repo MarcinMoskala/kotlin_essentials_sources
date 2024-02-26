@@ -1,16 +1,13 @@
 package f_19_operators.s_13
 
-fun main() {
-    val names = mutableListOf("Jake", "Ben")
-    names += "Jon"
-    names -= "Ben"
-    println(names) // [Jake, Jon]
+import java.time.LocalDateTime
 
-    val tools = mutableMapOf(
-        "Grass" to "Lawnmower",
-        "Nail" to "Hammer"
-    )
-    tools += "Screw" to "Screwdriver"
-    tools -= "Grass"
-    println(tools) // {Nail=Hammer, Screw=Screwdriver}
+fun main() {
+    val now = LocalDateTime.now()
+    val actionStarts = LocalDateTime.of(2010, 10, 20, 0, 0)
+    val actionEnds = actionStarts.plusDays(1)
+    println(now > actionStarts) // true
+    println(now <= actionStarts) // false
+    println(now < actionEnds) // false
+    println(now >= actionEnds) // true
 }

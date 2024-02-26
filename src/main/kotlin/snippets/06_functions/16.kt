@@ -1,9 +1,8 @@
 package f_06_functions.s_16
 
-import java.math.BigDecimal
-
-class Money(val amount: BigDecimal, val currency: String)
-
-fun pln(amount: BigDecimal) = Money(amount, "PLN")
-fun pln(amount: Int) = pln(amount.toBigDecimal())
-fun pln(amount: Double) = pln(amount.toBigDecimal())
+fun main() {
+    val list = listOf(1, 2, 3, 4)
+    println(list.joinToString("-")) // 1-2-3-4
+    // better
+    println(list.joinToString(separator = "-")) //  1-2-3-4
+}

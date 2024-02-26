@@ -1,15 +1,18 @@
 package f_11_data_classes.s_17
 
-fun String.parseName(): Pair<String, String>? {
-   val indexOfLastSpace = this.trim().lastIndexOf(' ')
-   if (indexOfLastSpace < 0) return null
-   val firstName = this.take(indexOfLastSpace)
-   val lastName = this.drop(indexOfLastSpace)
-   return Pair(firstName, lastName)
+data class FullName(
+   val name: String,
+   val surname: String,
+) {
+   val fullName = "$name $surname"
 }
 
-// Usage
 fun main() {
-  val fullName = "Marcin Moskała"
-  val (firstName, lastName) = fullName.parseName() ?: return
+   val d1 = FullName("Cookie", "Moskała")
+   println(d1.fullName) // Cookie Moskała
+   println(d1) // FullName(name=Cookie, surname=Moskała)
+
+   val d2 = d1.copy()
+   println(d2.fullName) // Cookie Moskała
+   println(d2) // FullName(name=Cookie, surname=Moskała)
 }

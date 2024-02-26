@@ -1,26 +1,15 @@
 package f_10_inheritance.s_8
 
-interface NicePerson {
-   fun cheer() {
-       println("Hello")
-   }
-}
+abstract class CoffeeMachine {
+    abstract fun prepareEspresso()
+    abstract fun addMilk()
 
-class Alex : NicePerson
-
-class Ben : NicePerson {
-   override fun cheer() {
-       super.cheer()
-       println("My name is Ben")
-   }
-}
-
-fun main() {
-   val alex = Alex()
-   alex.cheer() // Hello
-  
-   val ben = Ben()
-   ben.cheer()
-   // Hello
-   // My name is Ben
+    fun prepareLatte() {
+        prepareEspresso()
+        addMilk()
+    }
+    fun prepareDoppio() {
+        prepareEspresso()
+        prepareEspresso()
+    }
 }

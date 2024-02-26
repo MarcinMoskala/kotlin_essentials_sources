@@ -1,12 +1,20 @@
 package f_11_data_classes.s_16
 
+data class Dog(
+   val name: String,
+) {
+   // Bad practice, avoid mutable properties in data classes
+   var trained = false
+}
+
 fun main() {
-   val p1: Pair<String, Int> = "ABC" to 123
-   println(p1) // (ABC, 123)
-   val p2 = 'A' to 3.14 
-   // the type of p2 is Pair<Char, Double>
-   println(p2) // (A, 123)
-   val p3 = true to false
-   // the type of p3 is Pair<Boolean, Boolean>
-   println(p3) // (true, false)
+   val d1 = Dog("Cookie")
+   d1.trained = true
+   println(d1) // Dog(name=Cookie)
+   // so nothing about trained property
+
+   val d2 = d1.copy()
+   println(d1.trained) // true
+   println(d2.trained) // false
+   // so trained value not copied
 }

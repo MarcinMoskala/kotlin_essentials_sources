@@ -222,6 +222,7 @@ fun main() {
 
 
 ```
+//8
 fun findClusters(number: Int) {
     if (number < 1) {
         throw IllegalArgumentException("...")
@@ -254,7 +255,7 @@ fun pop(num: Int): List<T> {
 
 
 ```
-//8
+//9
 fun makeOperation(
     operation: String,
     left: Int,

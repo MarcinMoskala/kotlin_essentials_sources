@@ -1,6 +1,5 @@
 package f_20_type_system.s_2
 
-fun main() {
-    val a: Nothing = return
-    val b: Nothing = throw Error()
+object Unit {
+    override fun toString() = "kotlin.Unit"
 }

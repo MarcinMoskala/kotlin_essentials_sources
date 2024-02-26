@@ -1,12 +1,12 @@
 package f_09_classes.s_16
 
-class User(
-    var name: String = "",
-    var surname: String = "Anonim",
-)
+class User(name: String, surname: String) {
+    var name: String = name
+    var surname: String = surname
+}
 
 fun main() {
-    val user = User("Johnny")
+    val user = User("Johnny", "Depp")
     println(user.name) // Johnny
-    println(user.surname) // Anonim
+    println(user.surname) // Depp
 }

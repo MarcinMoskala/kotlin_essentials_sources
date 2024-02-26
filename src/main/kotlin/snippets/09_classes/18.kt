@@ -1,16 +1,14 @@
 package f_09_classes.s_18
 
-class Puppy(val name: String) {
-
-    inner class InnerPuppy {
-        fun think() {
-            println("Inner $name is thinking")
-        }
-    }
+class User(
+    var name: String,
+    var surname: String,
+) {
+    // optional body
 }
 
 fun main() {
-    val puppy = Puppy("Cookie")
-    val innerPuppy = puppy.InnerPuppy() // We need puppy
-    innerPuppy.think() // Inner Cookie is thinking
+    val user = User("Johnny", "Depp")
+    println(user.name) // Johnny
+    println(user.surname) // Depp
 }

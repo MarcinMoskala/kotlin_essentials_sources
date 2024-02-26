@@ -1,21 +1,16 @@
 package f_04_basic_values.s_25
 
 fun main() {
-    val text = """
-   Let's say:
-   "Hooray"
-   """.trimIndent()
-    println(text)
+    val text1 = "Let\'s say:\n\"Hooray\""
+    println(text1)
     // Let's say:
     // "Hooray"
-
-    val description = """
-      A
-      B
-          C
-  """.trimIndent()
-    println(description)
-    // A
-    // B
-    //     C
+    val text2 = """Let\'s say:\n\"Hooray\""""
+    println(text2)
+    // Let\'s say:\n\"Hooray\"
+    val text3 = """Let's say:
+"Hooray""""
+    println(text3)
+    // Let's say:
+    // "Hooray"
 }

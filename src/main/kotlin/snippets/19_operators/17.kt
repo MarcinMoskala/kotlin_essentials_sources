@@ -1,5 +1,10 @@
 package f_19_operators.s_17
 
+data class Point(val x: Int, val y: Int)
+
+operator fun Point.unaryMinus() = Point(-x, -y)
+
 fun main() {
-    println(-1.plus(1))
+    val point = Point(10, 20)
+    println(-point)  // prints "Point(x=-10, y=-20)"
 }

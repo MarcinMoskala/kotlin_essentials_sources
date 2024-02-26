@@ -1,17 +1,16 @@
 package f_12_objects.s_3
 
-object Point {
-    var x = 0
-    var y = 0
+class Box {
+    var value: Any? = NOT_SET
+
+    fun initialized() = value != NOT_SET
+
+    companion object {
+        private val NOT_SET = object {}
+    }
 }
 
-fun main() {
-    println(Point.x) // 0
-    Point.y = 10
-    println(Point.y) // 10
-
-    val p = Point
-    p.x = 20
-    println(Point.x) // 20
-    println(Point.y) // 10
+private val LOCK = object {}
+fun synchronizedOperation() = synchronized(LOCK) {
+    // ...
 }

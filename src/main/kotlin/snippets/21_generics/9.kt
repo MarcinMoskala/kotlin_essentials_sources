@@ -1,9 +1,11 @@
 package f_21_generics.s_9
 
-import kotlin.reflect.typeOf
+open class C<T>
+interface I<T>
+class A : C<Int>(), I<String>
 
-inline fun <reified T> example(a: Any) {
-    val check = a is T
-    val ref = T::class
-    val type = typeOf<T>()
+fun main() {
+    val a = A()
+    val c: C<Int> = a
+    val i: I<String> = a
 }

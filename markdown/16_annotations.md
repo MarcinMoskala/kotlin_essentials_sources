@@ -34,6 +34,7 @@ class Money(
 
 
 ```
+//2
 annotation class Factory
 annotation class FactoryFunction(val name: String)
 
@@ -73,6 +74,7 @@ class DoctorServiceTest {
 
 
 ```
+//3
 @MustBeDocumented
 @Target(AnnotationTarget.CLASS)
 annotation class Factory
@@ -84,6 +86,7 @@ annotation class FactoryFunction(val name: String)
 
 
 ```
+//4
 // JvmOverloads annotates primary constructor
 class User @JvmOverloads constructor(
     val name: String,
@@ -94,6 +97,7 @@ class User @JvmOverloads constructor(
 
 
 ```
+//5
 annotation class AnnotationWithList(
     val elements: Array<String>
 )

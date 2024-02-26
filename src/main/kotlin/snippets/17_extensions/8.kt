@@ -1,12 +1,19 @@
 package f_17_extensions.s_8
 
-object A
+open class View
+class Button : View()
 
-fun A.foo() {}
+fun printMe(view: View) {
+    println("I'm a View")
+}
+
+fun printMe(button: Button) {
+    println("I'm a Button")
+}
 
 fun main() {
-    A.foo()
-
-    val a: A = A
-    a.foo()
+    val button: Button = Button()
+    printMe(button) // I'm a Button
+    val view: View = button
+    printMe(view) // I'm a View
 }

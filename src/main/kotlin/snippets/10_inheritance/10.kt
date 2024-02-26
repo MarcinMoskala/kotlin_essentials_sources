@@ -1,11 +1,14 @@
 package f_10_inheritance.s_10
 
-fun consumeAnything(a: Any?) {
-    println("Om nom $a")
+interface Named {
+    val name: String
+    val fullName: String
 }
 
-fun main() {
-    consumeAnything(null) // Om nom null
-    consumeAnything(123) // Om nom 123
-    consumeAnything("ABC") // Om nom ABC
+class User(
+    override val name: String,
+    val surname: String,
+) : Named {
+    override val fullName: String
+        get() = "$name $surname"
 }

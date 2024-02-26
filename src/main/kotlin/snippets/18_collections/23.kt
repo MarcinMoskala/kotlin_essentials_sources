@@ -1,11 +1,13 @@
 package f_18_collections.s_23
 
 fun main() {
-    val mutable = mutableSetOf("A", "B")
-    mutable.add("C")
-    println(mutable) // [A, B, C]
-    mutable.addAll(listOf("D", "E"))
-    println(mutable) // [A, B, C, D, E]
-    mutable.remove("B")
-    println(mutable) // [A, C, D, E]
+    var set = setOf("A", "B")
+    set = set + "C"
+    println(set) // [A, B, C]
+    set = set + setOf("D", "E")
+    println(set) // [A, B, C, D, E]
+    set = setOf("Z") + set
+    println(set) // [Z, A, B, C, D, E]
+    set = set - "A"
+    println(set) // [Z, B, C, D, E]
 }

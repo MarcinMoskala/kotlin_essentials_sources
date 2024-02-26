@@ -24,12 +24,13 @@ fun main() {
 
 
 ```
+//2
 data class Complex(val real: Double, val imaginary: Double)
 ```
 
 
 ```
-//2
+//3
 data class Complex(val real: Double, val imaginary: Double) {
 
     operator fun plus(another: Complex) = Complex(
@@ -60,7 +61,7 @@ c1 - c2 // under the hood is c1.minus(c2)
 
 
 ```
-//3
+//4
 fun main() {
     println(13 % 4) // 1
     println(7 % 4)  // 3
@@ -74,7 +75,7 @@ fun main() {
 
 
 ```
-//4
+//5
 fun main() {
     val intRange: IntRange = 1..10
     val comparableRange: ClosedRange<String> = "A".."Z"
@@ -84,7 +85,7 @@ fun main() {
 
 
 ```
-//5
+//6
 fun main() {
     val letters = setOf("A", "B", "C")
     println("A" in letters) // true
@@ -96,7 +97,7 @@ fun main() {
 
 
 ```
-//6
+//7
 fun main() {
     println(5 in 1..10) // true
     println(11 in 1..10) // false
@@ -105,7 +106,7 @@ fun main() {
 
 
 ```
-//7
+//8
 import java.math.BigDecimal
 import java.time.LocalDateTime
 
@@ -125,6 +126,7 @@ fun main() {
 
 
 ```
+//9
 public interface Iterable<out T> {
     /**
      * Returns an iterator over the elements of this object.
@@ -135,7 +137,7 @@ public interface Iterable<out T> {
 
 
 ```
-//8
+//10
 // Part of Kotlin standard library
 inline operator fun <K, V>
 Map<out K, V>.iterator(): Iterator<Map.Entry<K, V>> =
@@ -177,6 +179,7 @@ fun main() {
 
 
 ```
+//11
 public interface Comparable<in T> {
     /**
      * Compares this object with the specified object for
@@ -191,7 +194,7 @@ public interface Comparable<in T> {
 
 
 ```
-//9
+//12
 import java.math.BigDecimal
 
 fun main() {
@@ -210,7 +213,7 @@ fun main() {
 
 
 ```
-//10
+//13
 import java.time.LocalDateTime
 
 fun main() {
@@ -226,7 +229,7 @@ fun main() {
 
 
 ```
-//11
+//14
 fun main() {
     val mutableList = mutableListOf("A", "B", "C")
     println(mutableList[1]) // B
@@ -245,7 +248,7 @@ fun main() {
 
 
 ```
-//12
+//15
 fun main() {
     var str = "ABC"
     str += "D" // translates to str = str + "D"
@@ -259,7 +262,7 @@ fun main() {
 
 
 ```
-//13
+//16
 fun main() {
     val names = mutableListOf("Jake", "Ben")
     names += "Jon"
@@ -278,7 +281,7 @@ fun main() {
 
 
 ```
-//14
+//17
 data class Point(val x: Int, val y: Int)
 
 operator fun Point.unaryMinus() = Point(-x, -y)
@@ -291,7 +294,7 @@ fun main() {
 
 
 ```
-//15
+//18
 fun main() {
     var i = 10
     println(i++) // 10
@@ -309,7 +312,7 @@ fun main() {
 
 
 ```
-//16
+//19
 class CheerUseCase {
     operator fun invoke(who: String) {
         println("Hello, $who")
@@ -329,7 +332,7 @@ fun main() {
 
 
 ```
-//17
+//20
 fun main() {
     println(-1.plus(1))
 }
@@ -337,7 +340,7 @@ fun main() {
 
 
 ```
-//18
+//21
 fun main() {
     println((-1).plus(1)) // 0
 }

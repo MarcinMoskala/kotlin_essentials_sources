@@ -1,11 +1,17 @@
 package f_21_generics.s_8
 
-open class C<T>
-interface I<T>
-class A<T> : C<Int>(), I<String>
+interface Consumer<T> {
+    fun consume(value: T)
+}
+class DogFood
+
+class Dog : Consumer<DogFood> {
+    override fun consume(value: DogFood) {
+        println("Mlask mlask")
+    }
+}
 
 fun main() {
-    val a1: A<Double> = A<Double>()
-    val c1: C<Int> = a1
-    val i1: I<String> = a1
+    val dog: Dog = Dog()
+    val consumer: Consumer<DogFood> = dog
 }

@@ -1,8 +1,8 @@
 package f_04_basic_values.s_17
 
 fun main() {
-    println(10 == 10) // true
-    println(10 == 11) // false
-    println(10 != 10) // false
-    println(10 != 11) // true
+    val b1: Boolean = true
+    println(b1) // true
+    val b2: Boolean = false
+    println(b2) // false
 }

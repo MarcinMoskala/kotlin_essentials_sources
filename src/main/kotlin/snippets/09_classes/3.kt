@@ -1,12 +1,13 @@
 package f_09_classes.s_3
 
-// Kotlin code
-class User {
-    var name: String = ""
+class A {
+    fun printMe() {
+        println(this)
+    }
 }
 
-fun main(args: Array<String>) {
-    val user = User()
-    user.name = "Alex" // setter call
-    println(user.name) // getter call
+fun main() {
+    val a = A()
+    println(a) // A@ADDRESS
+    a.printMe() // A@ADDRESS (the same address)
 }

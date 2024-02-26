@@ -386,6 +386,7 @@ fun main() {
 
 
 ```
+//16
 fun convertToInt(num: Number): Int =
     if (num is Int) num  // the type of num here is Int
     else num.toInt()
@@ -393,6 +394,7 @@ fun convertToInt(num: Number): Int =
 
 
 ```
+//17
 fun lengthIfString(a: Any): Int {
     if (a is String) {
         return a.length // the type of a here is String
@@ -403,7 +405,7 @@ fun lengthIfString(a: Any): Int {
 
 
 ```
-//16
+//18
 var obj: Any = "AAA"
 
 fun main() {
@@ -430,7 +432,7 @@ fun handleResponse(response: Result<T>) {
 
 
 ```
-//17
+//19
 fun main() {
     var i = 1
     // while-statement
@@ -452,7 +454,7 @@ fun main() {
 
 
 ```
-//18
+//20
 fun main() {
     generateSequence(1) { it * 2 }
         .takeWhile { it < 10 }

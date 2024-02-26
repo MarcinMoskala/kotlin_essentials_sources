@@ -29,6 +29,7 @@ inline fun CharSequence?.isNullOrBlank(): Boolean {
 
 
 ```
+//1
 open class Animal
 class Dog : Animal()
 ```
@@ -70,6 +71,7 @@ fun <T : Any> String.parseJson(): T = ...
 
 
 ```
+//2
 object Unit {
     override fun toString() = "kotlin.Unit"
 }
@@ -94,6 +96,7 @@ fun fail(): Nothing {
 
 
 ```
+//3
 inline fun TODO(): Nothing = throw NotImplementedError()
 
 inline fun error(message: Any): Nothing =
@@ -102,6 +105,7 @@ inline fun error(message: Any): Nothing =
 
 
 ```
+//4
 fun fib(n: Int): Int = TODO()
 ```
 
@@ -140,7 +144,7 @@ fun processPerson(person: Person?) {
 
 
 ```
-//1
+//5
 fun main() {
     val a = return
     val b = throw Error()
@@ -149,7 +153,7 @@ fun main() {
 
 
 ```
-//2
+//6
 fun main() {
     val a: Nothing = return
     val b: Nothing = throw Error()
@@ -188,6 +192,7 @@ fun processPerson(person: Person?) {
 
 
 ```
+//7
 fun fizzBuzz(): String {
     TODO()
 }
@@ -205,7 +210,7 @@ public interface SharedFlow<out T> : Flow<T> {
 
 
 ```
-//3
+//8
 fun main() {
     val n = null
     val i: Int? = n

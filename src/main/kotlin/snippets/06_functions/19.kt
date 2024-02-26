@@ -1,27 +1,9 @@
 package f_06_functions.s_19
 
-fun makeUser(
-    name: String,
-    surname: String,
-): User = User(
-    name = name,
-    surname = surname,
-)
+import java.math.BigDecimal
 
-class User(
-    val name: String,
-    val surname: String,
-)
+class Money(val amount: BigDecimal, val currency: String)
 
-fun main() {
-    val user = makeUser(
-        name = "Norbert",
-        surname = "Moskała",
-    )
-
-    val characters = listOf(
-        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-        "K", "L", "M", "N", "O", "P", "R", "S", "T", "U",
-        "W", "X", "Y", "Z",
-    )
-}
+fun pln(amount: BigDecimal) = Money(amount, "PLN")
+fun pln(amount: Int) = pln(amount.toBigDecimal())
+fun pln(amount: Double) = pln(amount.toBigDecimal())

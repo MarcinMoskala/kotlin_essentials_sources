@@ -1,27 +1,40 @@
 package f_10_inheritance.s_7
 
-class User(val id: Int, val name: String)
+abstract class Mammal {
+    val haveHairOrFur = true
+    val warmBlooded = true
+    var canFeed = false
 
-interface UserRepository {
-    fun findUser(id: Int): User? =
-        getUsers().find { it.id == id }
-
-    fun getUsers(): List<User>
+    abstract fun feedYoung()
 }
 
-class FakeUserRepository : UserRepository {
-    private var users = listOf<User>()
-
-    override fun getUsers(): List<User> = users
-
-    fun addUser(user: User) {
-        users += user
+class Dog : Mammal() {
+    override fun feedYoung() {
+        if (canFeed) {
+            println("Feeding young with milk")
+        }
     }
 }
 
+class Human : Mammal() {
+    override fun feedYoung() {
+        if (canFeed) {
+            println("Feeding young with milk")
+        } else {
+            println("Feeding young with milk from bottle")
+        }
+    }
+}
+
+fun feedYoung(mammal: Mammal) {
+    // We can do that, because feedYoung is an abstract
+    // function in Mammal
+    mammal.feedYoung()
+}
+
 fun main() {
-    val repo = FakeUserRepository()
-    repo.addUser(User(123, "Zed"))
-    val user = repo.findUser(123)
-    println(user?.name) // Zed
+    val dog = Dog()
+    dog.canFeed = true
+    feedYoung(dog) // Feeding young with milk
+    feedYoung(Human()) // Feeding young with milk from bottle
 }

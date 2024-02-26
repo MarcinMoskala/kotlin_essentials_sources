@@ -1,11 +1,5 @@
 package f_15_sealed.s_2
 
-sealed interface Parent
-class A : Parent
-class B : Parent
-class C : Parent
-
-fun main() {
-    println(Parent::class.sealedSubclasses)
-    // [class A, class B, class C]
-}
+abstract class Result
+class Success(val data: String) : Result()
+class Failure(val exception: Throwable) : Result()

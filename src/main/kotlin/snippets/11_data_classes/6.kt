@@ -1,13 +1,10 @@
 package f_11_data_classes.s_6
 
-data class Player(
-   val id: Int,
-   val name: String,
-   val points: Int
-)
+class FakeUserRepository
 
 fun main() {
-   val player = Player(0, "Gecko", 9999)
-   println(player == Player(0, "Gecko", 9999)) // true
-   println(player == Player(0, "Ross", 9999)) // false
+   val repository1 = FakeUserRepository()
+   val repository2 = FakeUserRepository()
+   println(repository1 == repository1) // true
+   println(repository1 == repository2) // false
 }

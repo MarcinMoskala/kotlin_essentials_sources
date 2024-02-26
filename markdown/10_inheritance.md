@@ -67,6 +67,7 @@ fun main() {
 
 
 ```
+//3
 open class Animal(val name: String)
 
 class Dodo : Animal("Dodo")
@@ -74,7 +75,7 @@ class Dodo : Animal("Dodo")
 
 
 ```
-//3
+//4
 open class Animal(val name: String)
 
 class Dog(name: String) : Animal(name)
@@ -96,7 +97,7 @@ fun main() {
 
 
 ```
-//4
+//5
 open class Dog {
     open fun seeFriend() {
         println("Wave its tail")
@@ -122,6 +123,7 @@ fun main() {
 
 
 ```
+//6
 abstract class Mammal {
    val haveHairOrFur = true
    val warmBlooded = true
@@ -137,7 +139,7 @@ abstract class Mammal {
 
 
 ```
-//5
+//7
 abstract class Mammal {
     val haveHairOrFur = true
     val warmBlooded = true
@@ -180,6 +182,7 @@ fun main() {
 
 
 ```
+//8
 abstract class CoffeeMachine {
     abstract fun prepareEspresso()
     abstract fun addMilk()
@@ -205,7 +208,7 @@ interface CoffeeMaker {
 
 
 ```
-//6
+//9
 class User(val id: Int, val name: String)
 
 interface UserRepository {
@@ -233,6 +236,7 @@ fun main() {
 
 
 ```
+//10
 interface Named {
     val name: String
     val fullName: String
@@ -249,6 +253,7 @@ class User(
 
 
 ```
+//11
 interface Named {
     val name: String
 }
@@ -260,6 +265,7 @@ class NameBox : Named {
 
 
 ```
+//12
 interface Drinkable {
     fun drink()
 }
@@ -280,7 +286,7 @@ class Mug : Drinkable, Spillable {
 
 
 ```
-//7
+//13
 class User(val id: Int, val name: String)
 
 interface UserRepository {
@@ -310,7 +316,7 @@ fun main() {
 
 
 ```
-//8
+//14
 interface NicePerson {
    fun cheer() {
        println("Hello")
@@ -339,7 +345,7 @@ fun main() {
 
 
 ```
-//9
+//15
 interface Boat {
    fun start() {
        println("Ready to swim")
@@ -543,7 +549,7 @@ fun main() {
 
 
 ```
-//10
+//16
 fun consumeAnything(a: Any?) {
     println("Om nom $a")
 }

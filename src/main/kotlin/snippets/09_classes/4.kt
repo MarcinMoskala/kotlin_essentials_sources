@@ -1,17 +1,12 @@
 package f_09_classes.s_4
 
+// Kotlin code
 class User {
     var name: String = ""
-        get() = field.uppercase()
-    // or
-    // var name: String = ""
-    //     get() {
-    //         return field.uppercase()
-    //     }
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val user = User()
-    user.name = "norbert"
-    println(user.name) // NORBERT
+    user.name = "Alex" // setter call
+    println(user.name) // getter call
 }

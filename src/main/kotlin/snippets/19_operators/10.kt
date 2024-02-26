@@ -1,13 +1,15 @@
 package f_19_operators.s_10
 
-import java.time.LocalDateTime
+// Part of Kotlin standard library
+inline operator fun <K, V>
+Map<out K, V>.iterator(): Iterator<Map.Entry<K, V>> =
+    entries.iterator()
 
 fun main() {
-    val now = LocalDateTime.now()
-    val actionStarts = LocalDateTime.of(2010, 10, 20, 0, 0)
-    val actionEnds = actionStarts.plusDays(1)
-    println(now > actionStarts) // true
-    println(now <= actionStarts) // false
-    println(now < actionEnds) // false
-    println(now >= actionEnds) // true
+    val map = mapOf('a' to "Alex", 'b' to "Bob")
+    for ((letter, name) in map) {
+        println("$letter like in $name")
+    }
 }
+// a like in Alex
+// b like in Bob
