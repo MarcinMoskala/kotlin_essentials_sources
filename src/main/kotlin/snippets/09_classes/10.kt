@@ -17,4 +17,3 @@ fun main() {
     println(user.fullName1) // Maja Moskała
     println(user.fullName2) // Maja Markiewicz
 }
-

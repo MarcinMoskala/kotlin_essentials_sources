@@ -8,6 +8,3 @@ fun main() {
         println("[$i] $name")
     }
 }
-// [0] Alex
-// [1] Bob
-// [2] Celina

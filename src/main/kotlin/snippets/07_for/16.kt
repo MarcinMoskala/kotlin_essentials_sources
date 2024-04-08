@@ -11,6 +11,3 @@ fun main() {
         println("The capital of $country is $capital")
     }
 }
-// The capital of USA is Washington DC
-// The capital of Poland is Warsaw
-// The capital of Ukraine is Kiev

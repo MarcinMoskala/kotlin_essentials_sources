@@ -8,4 +8,3 @@ fun main() {
         print(i)
     }
 }
-// (nothing is printed)

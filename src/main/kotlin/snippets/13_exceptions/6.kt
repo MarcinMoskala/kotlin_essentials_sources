@@ -12,4 +12,3 @@ fun main() {
     }
     println("Will not be printed")
 }
-// Finally block was called

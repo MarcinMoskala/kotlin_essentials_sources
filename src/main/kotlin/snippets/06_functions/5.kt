@@ -1,6 +1,5 @@
 package f_06_functions.s_5
 
-// Top-level function
 fun double(i: Int) = i * 2
 
 class A {
@@ -15,7 +14,6 @@ class A {
     }
 }
 
-// Top-level function
 fun main(args: Array<String>) {
     double(1) // 2
     A().twelveTimes(2) // 24

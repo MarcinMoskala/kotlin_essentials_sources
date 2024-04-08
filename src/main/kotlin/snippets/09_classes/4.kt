@@ -1,6 +1,5 @@
 package f_09_classes.s_4
 
-// Kotlin code
 class User {
     var name: String = ""
 }

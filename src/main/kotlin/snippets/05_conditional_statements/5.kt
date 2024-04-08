@@ -1,8 +1,5 @@
 package f_05_conditional_statements.s_5
 
-// Function we can execute on any object, to print it
-// 10.print() prints 10
-// "ABC".print() prints ABC
 fun Any?.print() {
     print(this)
 }

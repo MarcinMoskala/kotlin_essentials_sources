@@ -13,7 +13,6 @@ fun String.parseName(): FullName? {
    return FullName(firstName, lastName)
 }
 
-// Usage
 fun main() {
   val fullName = "Marcin Moskała"
   val (firstName, lastName) = fullName.parseName() ?: return

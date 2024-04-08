@@ -6,5 +6,3 @@ fun main() {
         println("$letter is for $name")
     }
 }
-// A is for Alex
-// B is for Bob

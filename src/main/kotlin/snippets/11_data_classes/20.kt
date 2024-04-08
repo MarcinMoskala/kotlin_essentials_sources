@@ -8,7 +8,6 @@ fun String.parseName(): Pair<String, String>? {
    return Pair(firstName, lastName)
 }
 
-// Usage
 fun main() {
   val fullName = "Marcin Moskała"
   val (firstName, lastName) = fullName.parseName() ?: return

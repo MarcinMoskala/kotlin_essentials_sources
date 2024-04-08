@@ -1,6 +1,5 @@
 package f_19_operators.s_10
 
-// Part of Kotlin standard library
 inline operator fun <K, V>
 Map<out K, V>.iterator(): Iterator<Map.Entry<K, V>> =
     entries.iterator()
@@ -11,5 +10,3 @@ fun main() {
         println("$letter like in $name")
     }
 }
-// a like in Alex
-// b like in Bob

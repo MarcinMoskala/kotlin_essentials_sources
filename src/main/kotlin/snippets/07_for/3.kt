@@ -5,4 +5,3 @@ fun main() {
         print(i)
     }
 }
-// 12345

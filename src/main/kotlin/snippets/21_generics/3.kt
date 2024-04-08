@@ -2,10 +2,8 @@ package f_21_generics.s_3
 
 import kotlin.random.Random
 
-// The result type is the same as the argument type
 fun <T> id(value: T): T = value
 
-// The result type is the closest supertype of arguments
 fun <T> randomOf(a: T, b: T): T =
     if (Random.nextBoolean()) a else b
 

@@ -1,10 +1,7 @@
 package f_18_collections.s_27
 
-// by default, each object from a regular class is unique
 class Cat(val name: String)
 
-// if the data modifier is used,
-// two instances with the same properties are equal
 data class Dog(val name: String)
 
 fun main() {

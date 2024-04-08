@@ -13,7 +13,3 @@ fun main() {
     }
     println("After try-finally")
 }
-// Function called
-// After call
-// Finally block was called
-// After try-finally

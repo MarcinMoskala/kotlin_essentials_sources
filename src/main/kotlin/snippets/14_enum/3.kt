@@ -16,8 +16,3 @@ fun main() {
         println(paymentOption)
     }
 }
-// TRANSFER
-// All options:
-// CASH
-// CARD
-// TRANSFER

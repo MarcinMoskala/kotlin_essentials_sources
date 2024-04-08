@@ -1,6 +1,5 @@
 package f_18_collections.s_47
 
-// JVM implementation
 operator fun <T> Array<T>.plus(element: T): Array<T> {
     val index = size
     val result = java.util.Arrays.copyOf(this, index + 1)
